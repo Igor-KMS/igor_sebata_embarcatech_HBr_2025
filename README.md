@@ -1,12 +1,12 @@
 # Projetos de Sistemas Embarcados - EmbarcaTech 2025
 
-Autor: **(insira seu nome)**
+Autor: **Igor Kenzo Martins Sebata**
 
 Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Campinas, março de 2025
+Campinas, Março de 2025
 
 ---
 
@@ -18,6 +18,6 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 
 ---
 
-## O que fazer com este arquivo
+### Projetos
 
-Ao fazer o *fork* do repositório, o aluno está livre para modificar este arquivo como quiser dentro do seu próprio *fork*.
+- [Sistema de Alarme para Tarefas Diárias](./projects/alarm_clock_for_daily_tasks)
