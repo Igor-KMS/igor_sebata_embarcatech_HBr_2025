@@ -21,3 +21,11 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 ### Projetos
 
 - [Sistema de Alarme para Tarefas Diárias](./projects/alarm_clock_for_daily_tasks)
+
+---
+
+## Exercícios
+
+- [Contador decrescente com registro de eventos por interrupção](./exercises/001_decreasing_counter)
+- [Leitura dos sinais analógicos do joystick](./exercises/002_read_analog_joystick)
+- [Monitor da temperatura interna da MCU](./exercises/003_internal_temperature_adc)
