@@ -85,4 +85,5 @@ Este projeto está licenciado sob a [GNU General Public License v3.0](/LICENSE)
 ### 🔗 Referências
 - [Documentação do Raspberry Pi Pico](https://www.raspberrypi.com/documentation/pico-sdk/)
 - [Datasheet do WS2812B](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf)
+- [Biblioteca 1306](https://github.com/daschr/pico-ssd1306)
 
