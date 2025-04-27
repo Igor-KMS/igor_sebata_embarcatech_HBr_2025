@@ -40,6 +40,7 @@ int main()
             handle_descend(&balls[i]);
             detect_collision(&balls[i]);
         }
+        sleep_ms(80);
     }
     return 0;
 }

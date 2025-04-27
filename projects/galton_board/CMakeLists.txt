@@ -40,6 +40,7 @@ add_executable(galton_board
         src/ball.c
         src/display.c
         src/ssd1306.c
+        src/collision.c
         )
 
 pico_set_program_name(galton_board "galton_board")

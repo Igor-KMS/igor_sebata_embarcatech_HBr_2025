@@ -9,8 +9,8 @@ int random_walk()
 {
   unsigned int value = rand() % (100 + 1);
   if (value & 0x01)
-    return -2;
-  return 2;
+    return -6;
+  return 6;
 }
 
 void clamp_inclusive(int *value, int lower, int upper)
@@ -35,10 +35,21 @@ void detect_pin_collision(obj *ball)
     obj pin = pins[p];
 
     int delta_x = ball->x - pin.x;
-    int delta_y = ball->y - pin.x;
+    int delta_y = ball->y - pin.y;
 
-    float dist = sqrtf(delta_x * delta_x - delta_y * delta_y);
-    if ((int)dist < (ball->radius + pin.radius))
+    float dist = sqrtf(delta_x * delta_x + delta_y * delta_y);
+
+    // if (dist < 10.f)
+    // {
+    //   unsigned int sum = ball->radius + pin.radius;
+    //   printf("\n x: %d - %d = %d", ball->x, pin.x, delta_x);
+    //   printf("\n y: %d - %d = %d", ball->y, pin.y, delta_y);
+    //   printf("\n d: %f || %u", dist, sum);
+    //   printf("\n r: %u || %u", ball->radius, pin.radius);
+    //   printf("\n-------");
+    // }
+
+    if ((int)dist < (ball->radius + pin.radius + 1))
     {
       handle_collision(ball);
     }
