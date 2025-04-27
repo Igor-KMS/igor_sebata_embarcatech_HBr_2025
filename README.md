@@ -29,3 +29,4 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 - [Contador decrescente com registro de eventos por interrupção](./exercises/001_decreasing_counter)
 - [Leitura dos sinais analógicos do joystick](./exercises/002_read_analog_joystick)
 - [Monitor da temperatura interna da MCU](./exercises/003_internal_temperature_adc)
+- [Estrutura de Código](./exercises/004_code_structure)
