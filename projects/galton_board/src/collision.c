@@ -4,13 +4,27 @@
 #include "math.h"
 #include "display.h"
 #include "collision.h"
+#include "random.h"
+
+int bias = 0;
 
 int random_walk()
 {
-  unsigned int value = rand() % (100 + 1);
-  if (value & 0x01)
-    return -6;
-  return 6;
+  switch (bias)
+  {
+    case 0:
+      if (get_random_bit())
+        return -5;
+      return 5;
+    case 1:
+      if ((get_random_byte() % 101) < 25)
+        return -5;
+      return 5;
+    case 2:
+      if ((get_random_byte() % 101) < 75)
+        return -5;
+      return 5;
+  }
 }
 
 void clamp_inclusive(int *value, int lower, int upper)
@@ -23,7 +37,7 @@ void clamp_inclusive(int *value, int lower, int upper)
 
 void handle_collision(obj *ball)
 {
-  ball->x -= 2;
+  ball->x -= 3;
   ball->y += random_walk();
   clamp_inclusive(&ball->y, (ball->radius * 2), D_HEIGHT - (ball->radius * 2));
 }

@@ -41,6 +41,10 @@ add_executable(galton_board
         src/display.c
         src/ssd1306.c
         src/collision.c
+        src/histogram.c
+        src/random.c
+        src/font.c
+        src/gui.c
         )
 
 pico_set_program_name(galton_board "galton_board")
@@ -63,6 +67,8 @@ target_include_directories(galton_board PRIVATE
 target_link_libraries(galton_board 
         hardware_i2c
         hardware_timer
+        pico_rand
+        hardware_adc
         )
 
 pico_add_extra_outputs(galton_board)
