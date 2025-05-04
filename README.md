@@ -21,6 +21,7 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 ### Projetos
 
 - [Sistema de Alarme para Tarefas Diárias](./projects/alarm_clock_for_daily_tasks)
+- [Projeto Dirigido: Galton Board](./projects/galton_board)
 
 ---
 
