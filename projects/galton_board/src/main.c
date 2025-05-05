@@ -22,13 +22,13 @@ void end_sequence()
     draw_text_sideways(55, 5, "BIN");
     draw_text_sideways(20, 5, "QTY");
 
-    for (int i = 0; i < MAX_BIN_QTY; i++)
+    for (int i = 0, j = MAX_BIN_QTY-1; i < MAX_BIN_QTY; i++)
     {
         char bin_str[4];
-        snprintf(bin_str, sizeof(bin_str), "%d", i + 1);
+        snprintf(bin_str, sizeof(bin_str), "%d", i+1);
 
         char count_str[6];
-        snprintf(count_str, sizeof(count_str), "%d", bins[i].count);
+        snprintf(count_str, sizeof(count_str), "%d", bins[j--].count);
 
         uint32_t row_y = 5 + (i + 1) * 9;
 
@@ -43,7 +43,7 @@ bool display_callback(struct repeating_timer *t)
 {
     static int polled = 0;
     static int qtd = 0;
-    if (++polled > 2 && qtd < max_ball_spawn)
+    if (++polled > 4 && qtd < max_ball_spawn)
     {
         spawn_ball();
         qtd++;
@@ -122,8 +122,8 @@ int main()
     populate_pins(6);
     populate_bins();
 
-    add_repeating_timer_ms(20, timer_callback, NULL, &tick_timer);
-    add_repeating_timer_ms(33, display_callback, NULL, &display_timer);
+    add_repeating_timer_ms(10, timer_callback, NULL, &tick_timer);
+    add_repeating_timer_ms(15, display_callback, NULL, &display_timer);
 
     while (true)
     {
